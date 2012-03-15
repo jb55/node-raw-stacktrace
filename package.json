@@ -2,7 +2,7 @@
   "author": "Bill Casarin <bill@casarin.ca>",
   "name": "raw-stacktrace",
   "description": "Emit raw stacktraces when errors are thrown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "url": ""
   },

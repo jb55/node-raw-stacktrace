@@ -64,6 +64,11 @@ module.exports = function TraceEmitter(opts){
   var hasCustomFormatter = !!opts.formatter;
   var formatter = opts.formatter || old || traceback.v8.FormatStackTrace;
   var rawCallSites = !opts.rawCallSites? false : !!opts.rawCallSites;
+
+  emitter.formatter = function(fn) {
+    hasCustomFormatter = true;
+    formatter = fn;
+  };
   
   Error.prepareStackTrace = function customPrepare(err, callsites){
     var sites = rawCallSites? callsites : _.map(callsites, simpleCallsite);
