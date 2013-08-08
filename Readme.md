@@ -85,7 +85,7 @@ var traces = raw();
 traces.on("trace", function(err, callsites){
   err.callsites = callsites;
 });
-'''
+```
 
 ### License
 
