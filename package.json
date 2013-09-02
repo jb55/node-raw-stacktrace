@@ -1,8 +1,8 @@
 {
-  "author": "Bill Casarin <bill@casarin.ca>",
+  "author": "William Casarin <will@casarin.ca>",
   "name": "raw-stacktrace",
   "description": "Emit raw stacktraces when errors are thrown",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "repository": {
     "url": ""
   },
