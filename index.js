@@ -1,5 +1,4 @@
 var EventEmitter = require('events').EventEmitter
-  , traceback = require('traceback')
   , path = require('path')
   , _  = require('underscore')._
   ;
@@ -62,8 +61,14 @@ module.exports = function TraceEmitter(opts){
   var emitter = new EventEmitter();
   var old = Error.prepareStackTrace;
   var hasCustomFormatter = !!opts.formatter;
-  var formatter = opts.formatter || old || traceback.v8.FormatStackTrace;
   var rawCallSites = !opts.rawCallSites? false : !!opts.rawCallSites;
+  var formatter;
+
+  if (opts.formatter) {
+    formatter = opts.formatter;
+  } else {
+    formatter = old || require('traceback').v8.FormatStackTrace;
+  }
 
   emitter.formatter = function(fn) {
     hasCustomFormatter = true;
