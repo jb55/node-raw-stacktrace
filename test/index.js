@@ -11,6 +11,7 @@ describe('raw-stacktrace', function(){
       assert(callsites)
       assert(callsites[0])
       assert(callsites[0].type)
+      assert('isTop' in callsites[0])
       done();
     });
 

@@ -7,7 +7,7 @@
     "callsite",
     "callsites"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/jb55/node-raw-stacktrace.git"
@@ -17,7 +17,7 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "traceback": "^0.3.0"
+    "traceback": ">=0.3.0 && <0.4.0"
   },
   "devDependencies": {
     "mocha": "*",
