@@ -1,7 +1,5 @@
-var EventEmitter = require('events').EventEmitter
-  , path = require('path')
-  , _  = require('underscore')._
-  ;
+var EventEmitter = require('events').EventEmitter;
+var path = require('path');
 
 //
 // taken from traceback since they were not exported
@@ -76,7 +74,7 @@ module.exports = function TraceEmitter(opts){
   };
   
   Error.prepareStackTrace = function customPrepare(err, callsites){
-    var sites = rawCallSites? callsites : _.map(callsites, simpleCallsite);
+    var sites = rawCallSites? callsites : callsites.map(simpleCallsite);
     emitter.emit("trace", err, sites);
     return formatter(err, hasCustomFormatter? sites : callsites);
   };

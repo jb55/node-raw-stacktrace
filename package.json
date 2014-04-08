@@ -1,19 +1,19 @@
 {
-  "author": "William Casarin <will@casarin.ca>",
   "name": "raw-stacktrace",
-  "description": "Emit raw stacktraces when errors are thrown",
-  "version": "1.0.0",
+  "description": "Emit and/or format raw stacktraces when errors are thrown",
+  "keywords": ["stacktrace", "trace", "callsite", "callsites"],
+  "version": "1.0.1",
   "repository": {
-    "url": ""
+    "type": "git",
+    "url": "git://github.com/jb55/node-raw-stacktrace.git"
   },
   "main": "index.js",
-  "engines": {
-    "node": "~0.6.8"
+  "scripts": {
+    "test": "mocha --reporter spec"
   },
-  "dependencies": {
-    "traceback": ">=0.3.0 && < 0.4"
-  , "underscore": "*"
-  },
-  "devDependencies": {},
-  "optionalDependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "better-assert": "*"
+  }
 }
