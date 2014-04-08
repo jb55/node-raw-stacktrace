@@ -5,6 +5,8 @@ Get raw stack traces when errors are thrown.
 
 Optionally customize the format of stack traces.
 
+[![Build Status](https://travis-ci.org/jb55/node-raw-stacktrace.png)](https://travis-ci.org/jb55/node-raw-stacktrace)
+
 ## How it works
 
 node-raw-stacktrace works by hooking into v8's prepareStackTrace call. v8 calls
