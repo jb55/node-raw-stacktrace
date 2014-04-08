@@ -1,8 +1,13 @@
 {
   "name": "raw-stacktrace",
   "description": "Emit and/or format raw stacktraces when errors are thrown",
-  "keywords": ["stacktrace", "trace", "callsite", "callsites"],
-  "version": "1.0.1",
+  "keywords": [
+    "stacktrace",
+    "trace",
+    "callsite",
+    "callsites"
+  ],
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/jb55/node-raw-stacktrace.git"
@@ -11,7 +16,9 @@
   "scripts": {
     "test": "mocha --reporter spec"
   },
-  "dependencies": {},
+  "dependencies": {
+    "traceback": "^0.3.0"
+  },
   "devDependencies": {
     "mocha": "*",
     "better-assert": "*"
